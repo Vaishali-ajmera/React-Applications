@@ -1,7 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import About from "./components/About.js";
 import Alert from "./components/Alert";
 import React, {useState} from 'react';
 import {
@@ -47,9 +46,7 @@ function App() {
       <Navbar title = "textUtils" mode = {mode} toggleMode= {toggleMode} />
       <Alert alert = {alert}/>
       <div className="container my-3">
-      <Routes>
-          <Route exact path="/about" element = {<About mode = {mode}  />} />
-         
+      <Routes>         
           <Route exact path="/" element = {<TextForm showAlert = {showAlert} heading = "Enter the text to analyse below" mode = {mode} />}  />
          
         </Routes>

@@ -31,6 +31,7 @@ const News = (props)=>{
     let parsedData = await data.json();
     props.setProgress(70);
 
+    
 
     setArticles(parsedData.articles);
     setTotalResults(parsedData.totalResults)
@@ -40,7 +41,7 @@ const News = (props)=>{
    }
 
    useEffect(() => {
-    document.title = `${captializeFirstLetter(props.category)} - NewsMonkey`;
+    document.title = `${captializeFirstLetter(props.category)} - TaazaKhabar`;
     updateNews(); 
     // eslint-disable-next-line
 }, [])
@@ -62,7 +63,7 @@ const News = (props)=>{
 
     return (
        <>
-        <h1 className="text-center" style = {{margin: '30px',marginTop:'90px'}}> NewsMonkey - Top  {captializeFirstLetter(props.category)} Headlines</h1>
+        <h1 className="text-center" style = {{margin: '30px',marginTop:'90px'}}> TaazaKhabar - Top  {captializeFirstLetter(props.category)} Headlines</h1>
         {loading && <Spinner/>}
         <InfiniteScroll
           dataLength={articles.length}
