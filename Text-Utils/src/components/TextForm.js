@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function TextForm(props) {
-    const [text, setText] = useState("Enter the text here");
+    const [text, setText] = useState("");
 
   const handleUpClick = ()=>{
     const newText = text.toUpperCase();
@@ -50,7 +50,7 @@ const handleClearClick = ()=>{
     <div className='container' style={{color: props.mode==='dark'?'white':'#042743'}}>
             <h1>{props.heading}</h1>
             <div className="mb-3">
-            <textarea  className="form-control" style={{backgroundColor: props.mode==='dark'?'#13466e':'white', color: props.mode==='dark'?'white':'#042743'}} id="Textarea" rows="8" value = {text} onChange = {handleOnChange} required ></textarea>
+            <textarea  className="form-control" style={{backgroundColor: props.mode==='dark'?'#13466e':'white', color: props.mode==='dark'?'white':'#042743'}} id="Textarea" rows="8" placeholder = "Enter the text here" value = {text} onChange = {handleOnChange} required ></textarea>
             </div>
             <button  className="btn btn-primary mx-1 my-1"  onClick={handleUpClick}>Uppercase</button>
             <button  className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Lowercase</button>
